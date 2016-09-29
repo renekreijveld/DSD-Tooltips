@@ -15,7 +15,7 @@ Bootstrap 3 CSS and Bootstrap 3 Javascript with jQuery must be loaded for the to
 
 Separate all your parameters will the verticale 'pipe' symbol: |
 
-##Parameters:
+##Parameters
 
 **linktext**: text to show in your content. This text will be shown as a link and hovering or clicking it will trigger the tooltip.
 
@@ -28,3 +28,8 @@ Separate all your parameters will the verticale 'pipe' symbol: |
 **showdelay** (*optional*): Delay in milliseconds to show the tooltip. This is ingored for trigger type 'click'.
 
 **hidedelay** (*optional*): Delay in milliseconds to hide the tooltip. This is ingored for trigger type 'click'.
+
+##Installation
+
+* Download the installer file: https://github.com/renekreijveld/com_adres/raw/master/com_adres-1.0.2-installer.zip
+* Install the plugin with the Joomla extension installer and publish the plugin.
