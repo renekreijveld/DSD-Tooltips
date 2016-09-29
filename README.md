@@ -17,7 +17,7 @@ Separate all your parameters will the verticale 'pipe' symbol: |
 
 ##Parameters:
 
-linktext: text to show in your content, where the tooltip will be linked to.
+linktext: text to show in your content. This text will be shown as a link and hovering or click it will trigger the tooltip.
 
 tiptitle (optional): Title to show at the top inside the tooltip.
 
