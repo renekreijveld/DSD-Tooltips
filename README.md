@@ -31,5 +31,5 @@ Separate all your parameters will the verticale 'pipe' symbol: |
 
 ##Installation
 
-* Download the installer file: https://github.com/renekreijveld/com_adres/raw/master/com_adres-1.0.2-installer.zip
+* Download the installer file: https://github.com/renekreijveld/DSD-Tooltips/blob/master/plg_dsdtooltips.zip
 * Install the plugin with the Joomla extension installer and publish the plugin.
