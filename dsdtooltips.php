@@ -55,15 +55,29 @@ class plgSystemDsdtooltips extends JPlugin
 					$tiptext = substr(strstr($par1[$x], '='), 1);
 					$tiptext = str_replace('"', '\'', $tiptext);
 					break;
+					case 'showdelay':
+					$showdelay = substr(strstr($par1[$x], '='), 1);
+					break;
+					case 'hidedelay':
+					$hidedelay = substr(strstr($par1[$x], '='), 1);
+					break;
 				}
 			}
 
-			// If no trigger mentioned, set default triger to 'focus'
-			if (empty($trigger)) $trigger = "focus";
+			// Set default values for some parameters
+			if (empty($trigger)) $trigger = $this->params->get('trigger');
+			if (empty($showdelay)) $showdelay = $this->params->get('showdelay');
+			if (empty($hidedelay)) $hidedelay = $this->params->get('hidedelay');
 
-			$replacement = '<a href="#" title="';
+			if ($trigger == "click")
+			{
+				$showdelay = "0";
+				$hidedelay = "0";
+			}
+
+			$replacement = '<a class="ttip" title="';
 			if ($tiptitle) $replacement .= '<h3>' . $tiptitle . '</h3>';
-			$replacement .=  $tiptext . '" data-toggle="tooltip" data-placement="auto" data-html="true" data-trigger="' . $trigger . '">' . $linktext . '</a>';
+			$replacement .=  $tiptext . '" data-toggle="tooltip" data-delay=\'{"show":"' . $showdelay . '", "hide":"' . $hidedelay . '"}\' data-placement="auto" data-html="true" data-trigger="' . $trigger . '">' . $linktext . '</a>';
 
 			$body = str_replace($matches[0], $replacement, $body);
 			$linktext = '';

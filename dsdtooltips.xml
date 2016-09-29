@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="1.0.0" type="plugin" group="system" method="upgrade">
+<extension version="1.0" type="plugin" group="system" method="upgrade">
 	<name>DSD Tooltips</name>
 	<author>DSD Business Internet</author>
 	<creationDate>September 2016</creationDate>
@@ -10,12 +10,28 @@
 	<version>1.0.0</version>
 
 	<description><![CDATA[
-	<div class="alert">
 	<h2>DSD Tooltips</h2>
 	<br />
-	<p>Handge tooltips</p>
+	This plugin generates Bootstrap 3 compatible tooltips.
 	<br />
-	</div>
+	<br />
+	<strong>Usage</strong>: {tooltip linktext=linktext to show|tiptitle=Tooltip|tiptext=Lorem ipsum dolor sit amet.|trigger=hover|showdelay=500|hidedelay=2500}
+	<br />
+	Separate all your parameters will the verticale 'pipe' symbol: |</p>
+	<strong>Parameters:</strong>
+	<br />
+	<br />
+	<strong>linktext</strong>: text to show in your content, where the tooltip will be linked to.
+	<br />
+	<strong>tiptitle</strong> (optional): Title to show at the top inside the tooltip.
+	<br />
+	<strong>tiptext</strong>: Text to show inside the tooltip. This can be plain html.
+	<br />
+	<strong>trigger</strong> (optional): Trigger to use for showing the tooltip. Can be 'click', 'hover' or 'focus'.
+	<br />
+	<strong>showdelay</strong> (optional): Delay in milliseconds to show the tooltip. This is ingored for trigger type 'click'.
+	<br />
+	<strong>hidedelay</strong> (optional): Delay in milliseconds to hide the tooltip. This is ingored for trigger type 'click'.
 	]]>
 	</description>
 
@@ -23,7 +39,21 @@
 		<filename plugin="dsdtooltips">dsdtooltips.php</filename>
 		<filename>index.html</filename>
 		<filename>dsdtooltips.xml</filename>
-		<folder>assents</folder>
+		<folder>assets</folder>
 	</files>
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="trigger" type="radio" class="btn-group btn-group-yesno" default="hover" label="Default trigger">
+					<option value="hover">Hover</option>
+					<option value="click">Click</option>
+					<option value="focus">Focus</option>
+				</field>
+				<field name="showdelay" type="text" default="250" label="Show delay" description="Delay for display of the tooltip. Ignored when trigger type is Click." />
+				<field name="hidedelay" type="text" default="1500" label="Hide delay" description="Delay for removal of the tooltip. Ignored when trigger type is Click." />
+			</fieldset>
+		</fields>
+	</config>
 
 </extension>
