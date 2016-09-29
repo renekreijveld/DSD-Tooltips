@@ -3,17 +3,19 @@ DSD Tooltips
 
 This plugin generates Bootstrap 3 compatible tooltips.
 
-# Requirements
+##Requirements
 
 Bootstrap 3 CSS and Bootstrap 3 Javascript with jQuery must be loaded for the tooltips to work.
 
-# Usage
+##Usage
 
+```
 {tooltip linktext=linktext to show|tiptitle=Tooltip|tiptext=Lorem ipsum dolor sit amet.|trigger=hover|showdelay=500|hidedelay=2500}
+```
 
 Separate all your parameters will the verticale 'pipe' symbol: |
 
-# Parameters:
+##Parameters:
 
 linktext: text to show in your content, where the tooltip will be linked to.
 
