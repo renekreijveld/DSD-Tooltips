@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.0.0" type="plugin" group="system" method="upgrade">
+	<name>DSD Tooltips</name>
+	<author>DSD Business Internet</author>
+	<creationDate>September 2016</creationDate>
+	<copyright>Copyright (C) 2016. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>r.kreijveld@dsd.nu</authorEmail>
+	<authorUrl>www.dsdbusinessinternet.nl</authorUrl>
+	<version>1.0.0</version>
+
+	<description><![CDATA[
+	<div class="alert">
+	<h2>DSD Tooltips</h2>
+	<br />
+	<p>Handge tooltips</p>
+	<br />
+	</div>
+	]]>
+	</description>
+
+	<files>
+		<filename plugin="dsdtooltips">dsdtooltips.php</filename>
+		<filename>index.html</filename>
+		<filename>dsdtooltips.xml</filename>
+		<folder>assents</folder>
+	</files>
+
+</extension>
