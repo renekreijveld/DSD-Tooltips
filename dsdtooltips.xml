@@ -15,6 +15,9 @@
 	This plugin generates Bootstrap 3 compatible tooltips.
 	<br />
 	<br />
+	<strong>Requirements</strong>: Bootstrap 3 css and Javascript and jQuery must be present for the tooltips to work.
+	<br />
+	<br />
 	<strong>Usage</strong>: {tooltip linktext=linktext to show|tiptitle=Tooltip|tiptext=Lorem ipsum dolor sit amet.|trigger=hover|showdelay=500|hidedelay=2500}
 	<br />
 	Separate all your parameters will the verticale 'pipe' symbol: |</p>
